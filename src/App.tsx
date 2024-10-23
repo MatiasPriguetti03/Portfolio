@@ -5,7 +5,7 @@ import {
     ChevronRight,
     ExternalLink,
     GraduationCap,
-    Award,
+    // Award,
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
@@ -89,9 +89,9 @@ export default function App() {
     const projects = [
         {
             title: 'volandoUY',
-            desc: 'Full-stack online store with real-time inventory management',
+            desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create packages, etc.',
             img: '/placeholder.svg?height=300&width=500',
-            gif: 'public/volandoUY.webp',
+            gif: 'src/assets/img/volandoUY.webp',
             repo: 'https://github.com/janedoe/ecommerce-platform',
             liveDemo: 'https://volandouy.herokuapp.com/',
             technologies: [
@@ -105,9 +105,9 @@ export default function App() {
         },
         {
             title: 'MercadoFinger',
-            desc: 'Full-stack online store with real-time inventory management',
+            desc: 'A CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
             img: '/placeholder.svg?height=300&width=500',
-            gif: 'public/volandoUY.webp',
+            gif: 'src/assets/img/volandoUY.webp',
             repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
             liveDemo: 'https://replit.com/@MatiasPriguetti/Mercado-Finger',
             technologies: ['C++', 'Makefile', 'Valgrind'],
@@ -135,42 +135,42 @@ export default function App() {
     // ];
     const education = [
         {
-            title: 'BSc in Computer Science',
-            institution: 'Tech University',
-            year: '2014-2018',
+            title: 'Computer Engineering',
+            institution: 'FING - UdelaR',
+            year: '2021 - Today',
         },
-        {
-            title: 'Full Stack Web Development',
-            institution: 'Coding Bootcamp',
-            year: '2018',
-        },
+        // {
+        //     title: 'Full Stack Web Development',
+        //     institution: 'Coding Bootcamp',
+        //     year: '2018',
+        // },
     ];
-    const certifications = [
-        {
-            title: 'AWS Certified Developer',
-            institution: 'Amazon Web Services',
-            year: '2023',
-        },
-        {
-            title: 'Google Cloud Professional',
-            institution: 'Google',
-            year: '2022',
-        },
-    ];
-    const minorProjects = [
-        {
-            title: 'Weather App',
-            desc: 'A simple weather application using OpenWeatherMap API',
-            repo: 'https://github.com/janedoe/weather-app',
-            technologies: ['React', 'OpenWeatherMap API', 'CSS3'],
-        },
-        {
-            title: 'Task Manager',
-            desc: 'A to-do list application with user authentication',
-            repo: 'https://github.com/janedoe/task-manager',
-            technologies: ['Vue.js', 'Firebase', 'Vuex'],
-        },
-    ];
+    // const certifications = [
+    //     {
+    //         title: 'AWS Certified Developer',
+    //         institution: 'Amazon Web Services',
+    //         year: '2023',
+    //     },
+    //     {
+    //         title: 'Google Cloud Professional',
+    //         institution: 'Google',
+    //         year: '2022',
+    //     },
+    // ];
+    // const minorProjects = [
+    //     {
+    //         title: 'Weather App',
+    //         desc: 'A simple weather application using OpenWeatherMap API',
+    //         repo: 'https://github.com/janedoe/weather-app',
+    //         technologies: ['React', 'OpenWeatherMap API', 'CSS3'],
+    //     },
+    //     {
+    //         title: 'Task Manager',
+    //         desc: 'A to-do list application with user authentication',
+    //         repo: 'https://github.com/janedoe/task-manager',
+    //         technologies: ['Vue.js', 'Firebase', 'Vuex'],
+    //     },
+    // ];
 
     return (
         <div
@@ -183,7 +183,14 @@ export default function App() {
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 opacity-0 translate-y-10">
                             Hi there, I'm
                             <br />
-                            <span className="text-yellow-400">Matías<span className='text-[rgb(246,89,11)]'>Priguetti</span></span>
+                            <span className='group'>
+                                <span className="text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out">
+                                    Matías
+                                </span>
+                                <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>
+                                    Priguetti
+                                </span>
+                            </span>
                         </h1>
                         <h2 className="text-lg sm:text-xl lg:text-2xl text-white mb-4 opacity-0 translate-y-10">
                             Computer Engineer Student
@@ -193,6 +200,7 @@ export default function App() {
                                 href="https://github.com/MatiasPriguetti03"
                                 aria-label="GitHub profile"
                                 className="text-white hover:text-yellow-400 transition-colors duration-300"
+                                target='_blank'
                             >
                                 <Github size={24} />
                             </a>
@@ -200,6 +208,7 @@ export default function App() {
                                 href="https://www.linkedin.com/in/mat%C3%ADas-priguetti-563b76237/"
                                 aria-label="LinkedIn profile"
                                 className="text-white hover:text-yellow-400 transition-colors duration-300"
+                                target='_blank'
                             >
                                 <Linkedin size={24} />
                             </a>
@@ -266,7 +275,7 @@ export default function App() {
                                         </div>
                                     </div>
                                 ))}
-                                {certifications.map((cert) => (
+                                {/* {certifications.map((cert) => (
                                     <div key={cert.title} className="flex items-center">
                                         <Award className="mr-2 text-yellow-400" />
                                         <div>
@@ -276,19 +285,19 @@ export default function App() {
                                             </p>
                                         </div>
                                     </div>
-                                ))}
+                                ))} */}
                             </div>
                         </div>
 
                         <div className="mb-8 minor-projects opacity-0 translate-y-10">
-                            <h3 className=" text-white mb-4">
+                            {/* <h3 className=" text-white mb-4">
                                 <span className="group text-2xl sm:text-3xl font-bold">
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>.</span>
                                     OtherMinorProjects
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                 </span>
-                            </h3>
-                            <div className="space-y-4">
+                            </h3> */}
+                            {/* <div className="space-y-4">
                                 {minorProjects.map((project) => (
                                     <div
                                         key={project.title}
@@ -319,7 +328,7 @@ export default function App() {
                                         </a>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="contact-button opacity-0 translate-y-10">
@@ -340,11 +349,11 @@ export default function App() {
                         <h3 className="text-2xl sm:text-3xl font-bold mb-6">
                             Featured Projects
                         </h3>
-                        <div className="flex flex-row justify-around space-y-8 mb-12 featured-projects opacity-0 scale-95">
-                            {projects.map((project) => (
+                        <div className="flex flex-row space-y-8 mb-12 featured-projects opacity-0 scale-95">
+                            {projects.map((project, index) => (
                                 <div
                                     key={project.title}
-                                    className="bg-white !mt-0  p-4 sm:p-6 rounded-lg shadow-lg"
+                                    className={`bg-white p-4 !mt-0 sm:p-6 rounded-lg shadow-lg w-full sm:w-1/2 ${index !== 0 ? 'ml-5' : ''}`}
                                 >
                                     <h4 className=" mb-2">
                                         <span className="group text-2xl sm:text-3xl font-bold  text-black/90">
@@ -353,12 +362,12 @@ export default function App() {
                                             <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                         </span>
                                     </h4>
-                                    <p className="text-gray-600 mb-4">{project.desc}</p>
+                                    <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
                                     <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
                                         <img
                                             src={project.gif}
                                             alt={project.title}
-                                            className="absolute top-0 w-full object-cover transition-transform duration-1000 ease-in-out hover:-translate-y-14"
+                                            className="absolute top-0 w-full object-cover"
                                         />
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-4">
@@ -384,6 +393,7 @@ export default function App() {
                                         <a
                                             href={project.liveDemo}
                                             className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                                            target="_blank"
                                         >
                                             <ExternalLink className="mr-2" />
                                             Live Demo
@@ -436,12 +446,14 @@ export default function App() {
                             <a
                                 href="https://github.com/MatiasPriguetti03"
                                 className="hover:text-yellow-400 transition-colors duration-300"
+                                target='_blank'
                             >
                                 <Github size={20} />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/mat%C3%ADas-priguetti-563b76237/"
                                 className="hover:text-yellow-400 transition-colors duration-300"
+                                target='_blank'
                             >
                                 <Linkedin size={20} />
                             </a>
