@@ -107,7 +107,7 @@ export default function App() {
             title: 'MercadoFinger',
             desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
             img: '/placeholder.svg?height=300&width=500',
-            gif: 'src/assets/img/volandoUY.webp',
+            gif: 'img/volandoUY.webp',
             repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
             liveDemo: 'https://replit.com/@MatiasPriguetti/Mercado-Finger',
             technologies: ['C++', 'Makefile', 'Valgrind'],
