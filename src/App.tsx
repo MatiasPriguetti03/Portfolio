@@ -95,7 +95,7 @@ export default function App() {
             img: { volandoUYImage },
             gif: '@/img/volandoUY.webp',
             repo: 'https://github.com/',
-            liveDemo: 'https://volandouy.herokuapp.com/',
+            liveDemo: '#',
             technologies: [
                 'HTML',
                 'CSS',
@@ -113,18 +113,6 @@ export default function App() {
     //         period: '2021 - Present',
     //         description: 'Led development of scalable web applications using React and Node.js.',
     //     },
-    //     {
-    //         title: 'Full Stack Developer',
-    //         company: 'Digital Solutions Ltd.',
-    //         period: '2019 - 2021',
-    //         description: 'Developed and maintained e-commerce platforms and internal tools.',
-    //     },
-    //     {
-    //         title: 'Junior Web Developer',
-    //         company: 'StartUp Ventures',
-    //         period: '2018 - 2019',
-    //         description: 'Assisted in front-end development and learned backend technologies.',
-    //     },
     // ];
     const education = [
         {
@@ -132,22 +120,13 @@ export default function App() {
             institution: 'FING - UdelaR',
             year: '2021 - Today',
         },
-        // {
-        //     title: 'Full Stack Web Development',
-        //     institution: 'Coding Bootcamp',
-        //     year: '2018',
-        // },
+
     ];
     // const certifications = [
     //     {
     //         title: 'AWS Certified Developer',
     //         institution: 'Amazon Web Services',
     //         year: '2023',
-    //     },
-    //     {
-    //         title: 'Google Cloud Professional',
-    //         institution: 'Google',
-    //         year: '2022',
     //     },
     // ];
     const minorProjects = [
@@ -204,7 +183,7 @@ export default function App() {
                             </a>
                         </div>
                         <p className="text-gray-400 mb-6 opacity-0 translate-y-10">
-                            I am passionate about solving complex problems through elegant code. Curious by nature and always eager to learn new technologies.
+                            With a <span className='text-yellow-400'>deep</span> interest in software development, I have <span className='text-yellow-400'>experience</span> in creating full-stack web applications and am constantly seeking opportunities to <span className='text-yellow-400'>grow</span> and <span className='text-yellow-400'>enhance</span> my knowledge.
                         </p>
 
                         {/* Work Experience */}
@@ -397,11 +376,12 @@ export default function App() {
                                             <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                         </span>
                                     </h3>
-                                    <p className="text-gray-700 mb-4">
-                                        As a Full Stack Developer with over 5 years of experience, I've had the opportunity to work on a wide range of projects, from small startups to large enterprise applications. My passion lies in creating efficient, scalable, and user-friendly web applications that solve real-world problems.
+                                    <p className="text-gray-700 mb-4 text-pretty">
+                                        As a student of Computer Engineering, I have a strong foundation in <span className='text-[rgb(246,89,11)]'>software development, data structures, algorithms, and computer systems</span>. I have experience building full-stack web applications. I'm passionate about <span className='text-[rgb(246,89,11)]'>creating clean and maintainable code</span>. Furthermore, I'm always looking for new opportunities to grow and expand my skill set. I'm currently seeking a software engineering internship to gain <span className='text-[rgb(246,89,11)]'>hands-on experience and further develop my technical skills</span>.
+
                                     </p>
-                                    <p className="text-gray-700 mb-4">
-                                        I'm constantly learning and staying up-to-date with the latest technologies and best practices in web development. When I'm not coding, you can find me contributing to open-source projects, mentoring junior developers, or exploring new hiking trails in my area.
+                                    <p className="text-gray-700 mb-4 text-pretty">
+                                        I'm a <span className='text-[rgb(246,89,11)]'>quick learner</span> and a team player who enjoys <span className='text-[rgb(246,89,11)]'>collaborating with others</span> to solve problems and create innovative solutions. Likewise, I'm excited about the opportunity to work with a team of talented engineers and contribute to projects that make a <span className='text-[rgb(246,89,11)]'>positive impact on people's lives</span>.
                                     </p>
                                 </div>
                                 <div className="md:w-1/3 mt-4 md:mt-0 justify-items-center place-content-center ">
@@ -415,7 +395,7 @@ export default function App() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </main >
 
             <footer className="bg-black text-white py-6">
                 <div className="container mx-auto px-4">
@@ -450,6 +430,6 @@ export default function App() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </div >
     );
 }
