@@ -8,6 +8,8 @@ import {
     // Award,
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
+import volandoUYImage from './assets/img/volandoUY.webp';
+import personalPhoto from './assets/img/PersonalPhoto.png';
 
 export default function App() {
     const scope = useRef(null);
@@ -90,9 +92,9 @@ export default function App() {
         {
             title: 'volandoUY',
             desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create packages, etc.',
-            img: '/placeholder.svg?height=300&width=500',
-            gif: '/img/volandoUY.webp',
-            repo: 'https://github.com/janedoe/ecommerce-platform',
+            img: { volandoUYImage },
+            gif: '@/img/volandoUY.webp',
+            repo: 'https://github.com/',
             liveDemo: 'https://volandouy.herokuapp.com/',
             technologies: [
                 'HTML',
@@ -102,15 +104,6 @@ export default function App() {
                 'Java',
                 'JSP',
             ],
-        },
-        {
-            title: 'MercadoFinger',
-            desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
-            img: '/placeholder.svg?height=300&width=500',
-            gif: '/img/volandoUY.webp',
-            repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
-            liveDemo: 'https://replit.com/@MatiasPriguetti/Mercado-Finger',
-            technologies: ['C++', 'Makefile', 'Valgrind'],
         },
     ];
     // const workExperience = [
@@ -283,7 +276,7 @@ export default function App() {
                             <h3 className=" text-white mb-4">
                                 <span className="group text-2xl sm:text-3xl font-bold">
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>.</span>
-                                    OtherMinorProjects
+                                    MinorProjects
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                 </span>
                             </h3>
@@ -341,7 +334,7 @@ export default function App() {
                         <h3 className="text-2xl sm:text-3xl font-bold mb-6">
                             Featured Projects
                         </h3>
-                        <div className="flex flex-row space-y-8 mb-12 featured-projects opacity-0 scale-95">
+                        <div className="flex flex-row sm:space-y-8 mb-12 featured-projects opacity-0 scale-95">
                             {projects.map((project, index) => (
                                 <div
                                     key={project.title}
@@ -357,7 +350,7 @@ export default function App() {
                                     <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
                                     <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
                                         <img
-                                            src={project.gif}
+                                            src={typeof project.img === 'string' ? project.img : project.img.volandoUYImage}
                                             alt={project.title}
                                             className="absolute top-0 w-full object-cover"
                                         />
@@ -411,14 +404,12 @@ export default function App() {
                                         I'm constantly learning and staying up-to-date with the latest technologies and best practices in web development. When I'm not coding, you can find me contributing to open-source projects, mentoring junior developers, or exploring new hiking trails in my area.
                                     </p>
                                 </div>
-                                <div className="md:w-1/3 mt-4 md:mt-0">
-                                    <div className="relative h-48 sm:h-64 w-full rounded-lg overflow-hidden">
-                                        <img
-                                            src="/img/volandoUY.webp"
-                                            alt="Jane Doe"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
+                                <div className="md:w-1/3 mt-4 md:mt-0 justify-items-center place-content-center ">
+                                    <img
+                                        src={personalPhoto}
+                                        alt="Matías Priguetti"
+                                        className="object-bottom relative w-auto  object-contain h-48 sm:h-64 rounded-lg overflow-hidden bg-gradient-to-b from-yellow-400/80 to-[rgb(246,89,11)]/80"
+                                    />
                                 </div>
                             </div>
                         </div>
