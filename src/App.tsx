@@ -105,7 +105,7 @@ export default function App() {
         },
         {
             title: 'MercadoFinger',
-            desc: 'A CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
+            desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
             img: '/placeholder.svg?height=300&width=500',
             gif: 'src/assets/img/volandoUY.webp',
             repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
@@ -157,20 +157,14 @@ export default function App() {
     //         year: '2022',
     //     },
     // ];
-    // const minorProjects = [
-    //     {
-    //         title: 'Weather App',
-    //         desc: 'A simple weather application using OpenWeatherMap API',
-    //         repo: 'https://github.com/janedoe/weather-app',
-    //         technologies: ['React', 'OpenWeatherMap API', 'CSS3'],
-    //     },
-    //     {
-    //         title: 'Task Manager',
-    //         desc: 'A to-do list application with user authentication',
-    //         repo: 'https://github.com/janedoe/task-manager',
-    //         technologies: ['Vue.js', 'Firebase', 'Vuex'],
-    //     },
-    // ];
+    const minorProjects = [
+        {
+            title: 'MercadoFinger',
+            desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
+            repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
+            technologies: ['C++', 'Makefile', 'Valgrind'],
+        },
+    ];
 
     return (
         <div
@@ -183,13 +177,9 @@ export default function App() {
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 opacity-0 translate-y-10">
                             Hi there, I'm
                             <br />
-                            <span className='group'>
-                                <span className="text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out">
-                                    Matías
-                                </span>
-                                <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>
-                                    Priguetti
-                                </span>
+                            <span className='bg-gradient-to-r from-yellow-400 to-orange-600 text-transparent bg-clip-text font-bold text-4xl sm:text-5xl'>
+                                Matías
+                                Priguetti
                             </span>
                         </h1>
                         <h2 className="text-lg sm:text-xl lg:text-2xl text-white mb-4 opacity-0 translate-y-10">
@@ -290,14 +280,14 @@ export default function App() {
                         </div>
 
                         <div className="mb-8 minor-projects opacity-0 translate-y-10">
-                            {/* <h3 className=" text-white mb-4">
+                            <h3 className=" text-white mb-4">
                                 <span className="group text-2xl sm:text-3xl font-bold">
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>.</span>
                                     OtherMinorProjects
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                 </span>
-                            </h3> */}
-                            {/* <div className="space-y-4">
+                            </h3>
+                            <div className="space-y-4">
                                 {minorProjects.map((project) => (
                                     <div
                                         key={project.title}
@@ -317,18 +307,20 @@ export default function App() {
                                                 </span>
                                             ))}
                                         </div>
-                                        <a
-                                            href={project.repo}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300 flex items-center"
-                                        >
-                                            <Github className="mr-2" size={16} />
-                                            View Repository
-                                        </a>
+                                        <div className='flex'>
+                                            <a
+                                                href={project.repo}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300 flex items-center"
+                                            >
+                                                <Github className="mr-2" size={16} />
+                                                View Repository
+                                            </a>
+                                        </div>
                                     </div>
                                 ))}
-                            </div> */}
+                            </div>
                         </div>
 
                         <div className="contact-button opacity-0 translate-y-10">
