@@ -91,7 +91,7 @@ export default function App() {
             title: 'volandoUY',
             desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create packages, etc.',
             img: '/placeholder.svg?height=300&width=500',
-            gif: 'src/assets/img/volandoUY.webp',
+            gif: '/img/volandoUY.webp',
             repo: 'https://github.com/janedoe/ecommerce-platform',
             liveDemo: 'https://volandouy.herokuapp.com/',
             technologies: [
@@ -107,7 +107,7 @@ export default function App() {
             title: 'MercadoFinger',
             desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
             img: '/placeholder.svg?height=300&width=500',
-            gif: 'img/volandoUY.webp',
+            gif: '/img/volandoUY.webp',
             repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
             liveDemo: 'https://replit.com/@MatiasPriguetti/Mercado-Finger',
             technologies: ['C++', 'Makefile', 'Valgrind'],
@@ -414,7 +414,7 @@ export default function App() {
                                 <div className="md:w-1/3 mt-4 md:mt-0">
                                     <div className="relative h-48 sm:h-64 w-full rounded-lg overflow-hidden">
                                         <img
-                                            src="./placeholder-icon-ilustration.webp"
+                                            src="/img/volandoUY.webp"
                                             alt="Jane Doe"
                                             className="w-full h-full object-cover"
                                         />
