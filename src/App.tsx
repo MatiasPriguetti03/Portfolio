@@ -91,7 +91,7 @@ export default function App() {
     const projects = [
         {
             title: 'volandoUY',
-            desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create packages, etc.',
+            desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create and buy packages, etc.',
             img: { volandoUYImage },
             gif: '@/img/volandoUY.webp',
             repo: 'https://github.com/',
@@ -131,7 +131,7 @@ export default function App() {
     // ];
     const minorProjects = [
         {
-            title: 'MercadoFinger',
+            title: 'Mercado Finger',
             desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
             repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
             technologies: ['C++', 'Makefile', 'Valgrind'],
@@ -376,11 +376,10 @@ export default function App() {
                                             <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                         </span>
                                     </h3>
-                                    <p className="text-gray-700 mb-4 text-pretty">
-                                        As a student of Computer Engineering, I have a strong foundation in <span className='text-[rgb(246,89,11)]'>software development, data structures, algorithms, and computer systems</span>. I have experience building full-stack web applications. I'm passionate about <span className='text-[rgb(246,89,11)]'>creating clean and maintainable code</span>. Furthermore, I'm always looking for new opportunities to grow and expand my skill set. I'm currently seeking a software engineering internship to gain <span className='text-[rgb(246,89,11)]'>hands-on experience and further develop my technical skills</span>.
-
+                                    <p className="text-gray-700 mb-4 text-pretty text-md">
+                                        As a student of Computer Engineering, I have a strong foundation in <span className='text-[rgb(246,89,11)]'>software development, data structures, algorithms, and computer systems</span>.  I'm passionate about <span className='text-[rgb(246,89,11)]'>creating clean and maintainable code</span>. Furthermore, I'm always looking for new opportunities to grow and expand my skill set. I'm currently seeking a software engineering internship to gain <span className='text-[rgb(246,89,11)]'>hands-on experience and further develop my technical skills</span>.
                                     </p>
-                                    <p className="text-gray-700 mb-4 text-pretty">
+                                    <p className="text-gray-700 mb-4 text-pretty text-md">
                                         I'm a <span className='text-[rgb(246,89,11)]'>quick learner</span> and a team player who enjoys <span className='text-[rgb(246,89,11)]'>collaborating with others</span> to solve problems and create innovative solutions. Likewise, I'm excited about the opportunity to work with a team of talented engineers and contribute to projects that make a <span className='text-[rgb(246,89,11)]'>positive impact on people's lives</span>.
                                     </p>
                                 </div>
