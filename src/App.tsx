@@ -204,7 +204,7 @@ export default function App() {
                             </a>
                         </div>
                         <p className="text-gray-400 mb-6 opacity-0 translate-y-10">
-                            With a <span className='text-yellow-400'>deep</span> interest in software development, I have <span className='text-yellow-400'>experience</span> in creating full-stack web applications and am constantly seeking opportunities to <span className='text-yellow-400'>grow</span> and <span className='text-yellow-400'>enhance</span> my knowledge.
+                            With a <span className='text-yellow-400'>deep interest</span> in software development, I have <span className='text-yellow-400'>experience</span> in creating full-stack web applications and am <span className='text-yellow-400'>constantly</span> seeking opportunities to <span className='text-yellow-400'>grow and enhance</span> my knowledge.
                         </p>
 
                         {/* Work Experience */}
@@ -319,12 +319,14 @@ export default function App() {
                             <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                                 Get in touch
                             </h3>
-                            <a href="mailto:matiaspriguetti03@gmail.com">
-                                <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105">
-                                    Contact Me
-                                    <ChevronRight className="ml-2" />
-                                </button>
-                            </a>
+                            <div className='flex'>
+                                <a href="mailto:matiaspriguetti03@gmail.com">
+                                    <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105">
+                                        Contact Me
+                                        <ChevronRight className="ml-2" />
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
