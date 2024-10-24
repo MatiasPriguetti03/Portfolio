@@ -106,6 +106,26 @@ export default function App() {
             ],
         },
     ];
+
+    const currentProjects =
+    {
+        title: 'volandoUY',
+        desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create and buy packages, etc.',
+        img: { volandoUYImage },
+        gif: '@/img/volandoUY.webp',
+        repo: 'https://github.com/',
+        liveDemo: '#',
+        technologies: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Bootstrap',
+            'Java',
+            'JSP',
+        ],
+    };
+
+
     // const workExperience = [
     //     {
     //         title: 'Senior Full Stack Developer',
@@ -129,7 +149,7 @@ export default function App() {
     //         year: '2023',
     //     },
     // ];
-    const minorProjects = [
+    const otherProjects = [
         {
             title: 'Mercado Finger',
             desc: 'CLI application that simulates a marketplace where users can buy products, promotions, comment in products, etc.',
@@ -137,6 +157,7 @@ export default function App() {
             technologies: ['C++', 'Makefile', 'Valgrind'],
         },
     ];
+
 
     return (
         <div
@@ -250,17 +271,16 @@ export default function App() {
                                 ))} */}
                             </div>
                         </div>
-
                         <div className="mb-8 minor-projects opacity-0 translate-y-10">
                             <h3 className=" text-white mb-4">
                                 <span className="group text-2xl sm:text-3xl font-bold">
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>.</span>
-                                    MinorProjects
+                                    OtherProjects
                                     <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
                                 </span>
                             </h3>
                             <div className="space-y-4">
-                                {minorProjects.map((project) => (
+                                {otherProjects.map((project) => (
                                     <div
                                         key={project.title}
                                         className="bg-gray-800 p-4 rounded-lg"
@@ -313,7 +333,7 @@ export default function App() {
                         <h3 className="text-2xl sm:text-3xl font-bold mb-6">
                             Featured Projects
                         </h3>
-                        <div className="flex flex-row sm:space-y-8 mb-12 featured-projects opacity-0 scale-95">
+                        <div className="flex flex-row sm:space-y-8 mb-12 featured-projects">
                             {projects.map((project, index) => (
                                 <div
                                     key={project.title}
@@ -321,9 +341,9 @@ export default function App() {
                                 >
                                     <h4 className=" mb-2">
                                         <span className="group text-2xl sm:text-3xl font-bold  text-black/90">
-                                            <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>.</span>
+                                            <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>.</span>
                                             {project.title}
-                                            <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
+                                            <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>()</span>
                                         </span>
                                     </h4>
                                     <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
@@ -366,14 +386,74 @@ export default function App() {
                                 </div>
                             ))}
                         </div>
+
+                        <div>
+
+
+                            <h3 className="text-2xl sm:text-3xl font-bold mb-6">
+                                Currently Working On
+                            </h3>
+                            <div className="flex flex-col max-w-full w-full sm:space-y-8 mb-12">
+                                <div
+                                    key={currentProjects.title}
+                                    className={`bg-white p-4 !mt-0 sm:p-6 rounded-lg shadow-lg w-full `}
+                                >
+                                    <h4 className=" mb-2">
+                                        <span className="group text-2xl sm:text-3xl font-bold  text-black/90">
+                                            <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>.</span>
+                                            {currentProjects.title}
+                                            <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>()</span>
+                                        </span>
+                                    </h4>
+                                    <p className="text-gray-600 mb-4 text-pretty text">{currentProjects.desc}</p>
+                                    <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg ">
+                                        <img
+                                            src={typeof currentProjects.img === 'string' ? currentProjects.img : currentProjects.img.volandoUYImage}
+                                            alt={currentProjects.title}
+                                            className="absolute top-0 w-full object-contain transition-transform duration-1000 ease-in-out hover:-translate-y-3.5"
+                                        />
+                                    </div>
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {currentProjects.technologies.map((tech, techIndex) => (
+                                            <span
+                                                key={techIndex}
+                                                className=" bg-gray-200 text-gray-800 hover:bg-yellow-400/70 transition duration-300 ease-in-out text-xs sm:text-sm px-3 py-1 rounded-full"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <a
+                                            href={currentProjects.repo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                                        >
+                                            <Github className="mr-2" />
+                                            View Repository
+                                        </a>
+                                        <a
+                                            href={currentProjects.liveDemo}
+                                            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                                            target="_blank"
+                                        >
+                                            <ExternalLink className="mr-2" />
+                                            Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg mb-8 about-me opacity-0 translate-y-10">
                             <div className="flex flex-col md:flex-row">
                                 <div className="md:w-2/3 pr-0 md:pr-4">
                                     <h3 className=" mb-4">
                                         <span className="group text-2xl sm:text-3xl font-bold  text-black/90">
-                                            <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>.</span>
+                                            <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>.</span>
                                             AboutMe
-                                            <span className='text-yellow-400 group-hover:text-[rgb(246,89,11)] transition duration-300 ease-in-out'>()</span>
+                                            <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>()</span>
                                         </span>
                                     </h3>
                                     <p className="text-gray-700 mb-4 text-pretty text-md">
@@ -393,6 +473,7 @@ export default function App() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </main >
 
