@@ -110,7 +110,7 @@ export default function App() {
     const currentProjects =
     {
         title: 'volandoUY',
-        desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create and buy packages, etc.',
+        desc: 'Full-stack web with a variety of features such as user authentication, a booking system, the ability to create and buy packages, etc.',
         img: { volandoUYImage },
         gif: '@/img/volandoUY.webp',
         repo: 'https://github.com/',
@@ -165,7 +165,7 @@ export default function App() {
             className="flex flex-col min-h-screen bg-gradient-to-br from-yellow-400/90 to-orange-500/90 opacity-0"
         >
             <main className="flex-grow flex flex-col lg:flex-row">
-                <div className="lg:w-2/6 bg-black/90 p-4 sm:p-8 flex flex-col justify-between overflow-y-auto">
+                <div className="lg:w-2/6 bg-black/90 p-4 sm:p-8 flex flex-col justify-between overflow-y-auto ">
                     <div>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 opacity-0 translate-y-10">
                             Hi there, I'm
@@ -203,7 +203,7 @@ export default function App() {
                                 <Mail size={24} />
                             </a>
                         </div>
-                        <p className="text-gray-400 mb-6 opacity-0 translate-y-10">
+                        <p className="text-gray-400 mb-6 opacity-0 translate-y-10 text-md max-w-[500px]">
                             With a <span className='text-yellow-400'>deep interest</span> in software development, I have <span className='text-yellow-400'>experience</span> in creating full-stack web applications and am <span className='text-yellow-400'>constantly</span> seeking opportunities to <span className='text-yellow-400'>grow and enhance</span> my knowledge.
                         </p>
 
