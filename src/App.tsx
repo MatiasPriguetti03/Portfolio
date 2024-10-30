@@ -94,7 +94,7 @@ export default function App() {
             title: 'CookieType',
             desc: 'A simple game where you have to type the words that appear on the screen before the time runs out. It has a time selector, language selector, and more.',
             img: { cookieTypeImage },
-            gif: '@/img/cookieType.webp',
+            gif: '#',
             repo: 'https://github.com/MatiasPriguetti03/cookieType',
             liveDemo: 'https://matiaspriguetti03.github.io/cookieType/',
             technologies: [
