@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import volandoUYImage from './assets/img/volandoUY.webp';
-import cookieTypeImage from './assets/img/cookieType.webp';
+import cookieTypeImage from './assets/img/cookietype.webp';
 import personalPhoto from './assets/img/PersonalPhoto.png';
 
 export default function App() {
