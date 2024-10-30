@@ -112,7 +112,7 @@ export default function App() {
         desc: 'Full-stack web with a variety of features such as user authentication, a booking system, the ability to create and buy packages, check-in, etc.',
         img: { volandoUYImage },
         gif: '@/img/volandoUY.webp',
-        repo: 'https://github.com/',
+        repo: 'https://github.com/MatiasPriguetti03/Volando.UY',
         // liveDemo: '#',
         technologies: [
             'HTML',
@@ -348,12 +348,15 @@ export default function App() {
                                         </span>
                                     </h4>
                                     <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
-                                    <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
-                                        <img
-                                            src={typeof project.img === 'string' ? project.img : project.img.cookieTypeImage}
-                                            alt={project.title}
-                                            className="absolute top-0 w-full object-cover"
-                                        />
+                                    <div className="group relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
+                                        <a href={project.liveDemo} target='_blank' rel="noopener noreferrer" className='pointer'>
+                                            <img
+                                                src={typeof project.img === 'string' ? project.img : project.img.cookieTypeImage}
+                                                alt={project.title}
+                                                className="absolute top-0 w-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
+
+                                            />
+                                        </a>
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {project.technologies.map((tech, techIndex) => (
@@ -407,11 +410,11 @@ export default function App() {
                                         </span>
                                     </h4>
                                     <p className="text-gray-600 mb-4 text-pretty text">{currentProjects.desc}</p>
-                                    <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg ">
+                                    <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg group">
                                         <img
-                                            src={typeof currentProjects.img === 'string' ? currentProjects.img : currentProjects.img.volandoUYImage}
+                                            src={currentProjects.img.volandoUYImage}
                                             alt={currentProjects.title}
-                                            className="absolute top-0 w-full object-contain transition-transform duration-1000 ease-in-out hover:-translate-y-3.5"
+                                            className="absolute top-0 w-full object-contain group-hover:scale-105 transition-transform duration-300 ease-in-out"
                                         />
                                     </div>
                                     <div className="flex flex-wrap justify-between">
