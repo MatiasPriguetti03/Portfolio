@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import volandoUYImage from './assets/img/volandoUY.webp';
+import cookieTypeImage from './assets/img/cookieType.webp';
 import personalPhoto from './assets/img/PersonalPhoto.png';
 
 export default function App() {
@@ -90,31 +91,29 @@ export default function App() {
 
     const projects = [
         {
-            title: 'volandoUY',
-            desc: 'Full-stack web with a varaity of features such as user authentication, booking system, create and buy packages, etc.',
-            img: { volandoUYImage },
-            gif: '@/img/volandoUY.webp',
-            repo: 'https://github.com/',
-            liveDemo: '#',
+            title: 'CookieType',
+            desc: 'A simple game where you have to type the words that appear on the screen before the time runs out. It has a time selector, language selector, and more.',
+            img: { cookieTypeImage },
+            gif: '@/img/cookieType.webp',
+            repo: 'https://github.com/MatiasPriguetti03/cookieType',
+            liveDemo: 'https://matiaspriguetti03.github.io/cookieType/',
             technologies: [
                 'HTML',
                 'CSS',
                 'JavaScript',
-                'Bootstrap',
-                'Java',
-                'JSP',
+                'Vite',
             ],
         },
     ];
 
     const currentProjects =
     {
-        title: 'volandoUY',
-        desc: 'Full-stack web with a variety of features such as user authentication, a booking system, the ability to create and buy packages, etc.',
+        title: 'VolandoUY',
+        desc: 'Full-stack web with a variety of features such as user authentication, a booking system, the ability to create and buy packages, check-in, etc.',
         img: { volandoUYImage },
         gif: '@/img/volandoUY.webp',
         repo: 'https://github.com/',
-        liveDemo: '#',
+        // liveDemo: '#',
         technologies: [
             'HTML',
             'CSS',
@@ -351,7 +350,7 @@ export default function App() {
                                     <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
                                     <div className="relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
                                         <img
-                                            src={typeof project.img === 'string' ? project.img : project.img.volandoUYImage}
+                                            src={typeof project.img === 'string' ? project.img : project.img.cookieTypeImage}
                                             alt={project.title}
                                             className="absolute top-0 w-full object-cover"
                                         />
@@ -415,17 +414,17 @@ export default function App() {
                                             className="absolute top-0 w-full object-contain transition-transform duration-1000 ease-in-out hover:-translate-y-3.5"
                                         />
                                     </div>
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {currentProjects.technologies.map((tech, techIndex) => (
-                                            <span
-                                                key={techIndex}
-                                                className=" bg-gray-200 text-gray-800 hover:bg-yellow-400/70 transition duration-300 ease-in-out text-xs sm:text-sm px-3 py-1 rounded-full"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex flex-wrap justify-between">
+                                        <div className='flex flex-wrap gap-2'>
+                                            {currentProjects.technologies.map((tech, techIndex) => (
+                                                <span
+                                                    key={techIndex}
+                                                    className=" bg-gray-200 text-gray-800 hover:bg-yellow-400/70 transition duration-300 ease-in-out text-xs sm:text-sm px-3 py-1 rounded-full"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
                                         <a
                                             href={currentProjects.repo}
                                             target="_blank"
@@ -434,14 +433,6 @@ export default function App() {
                                         >
                                             <Github className="mr-2" />
                                             View Repository
-                                        </a>
-                                        <a
-                                            href={currentProjects.liveDemo}
-                                            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
-                                            target="_blank"
-                                        >
-                                            <ExternalLink className="mr-2" />
-                                            Live Demo
                                         </a>
                                     </div>
                                 </div>
