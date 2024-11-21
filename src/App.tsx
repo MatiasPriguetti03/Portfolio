@@ -168,6 +168,8 @@ export default function App() {
                 <title>Matías Priguetti - Computer Engineer Student</title>
                 <meta name="description" content="Portfolio de Matías Priguetti, estudiante de Ingeniería en Computación" />
                 <meta name="keywords" content="desarrollo web, full stack, ingeniería" />
+                <meta property="og:title" content="Matías Priguetti - Portfolio" />
+                <meta property="og:image" content="/assets/img/PersonalPhoto.png" />
             </Helmet>
             <main className="flex-grow flex flex-col lg:flex-row">
                 <div className="lg:w-2/6 bg-black/90 p-4 sm:p-8 flex flex-col justify-between overflow-y-auto ">
@@ -326,7 +328,10 @@ export default function App() {
                             </h3>
                             <div className='flex'>
                                 <a href="mailto:matiaspriguetti03@gmail.com">
-                                    <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105">
+                                    <button
+                                        aria-label="Contactar"
+                                        className="bg-yellow-400 text-black px-6 py-3 rounded-lg flex items-center hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                                    >
                                         Contact Me
                                         <ChevronRight className="ml-2" />
                                     </button>
