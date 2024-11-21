@@ -11,6 +11,7 @@ import { useEffect, useRef } from 'react';
 import volandoUYImage from './assets/img/volandoUY.webp';
 import cookieTypeImage from './assets/img/cookietype.webp';
 import personalPhoto from './assets/img/PersonalPhoto.png';
+import { Helmet } from 'react-helmet';
 
 export default function App() {
     const scope = useRef(null);
@@ -163,6 +164,11 @@ export default function App() {
             ref={scope}
             className="flex flex-col min-h-screen bg-gradient-to-br from-yellow-400/90 to-orange-500/90 opacity-0"
         >
+            <Helmet>
+                <title>Matías Priguetti - Computer Engineer Student</title>
+                <meta name="description" content="Portfolio de Matías Priguetti, estudiante de Ingeniería en Computación" />
+                <meta name="keywords" content="desarrollo web, full stack, ingeniería" />
+            </Helmet>
             <main className="flex-grow flex flex-col lg:flex-row">
                 <div className="lg:w-2/6 bg-black/90 p-4 sm:p-8 flex flex-col justify-between overflow-y-auto ">
                     <div>
