@@ -424,7 +424,7 @@ export default function App() {
                                         />
                                     </div>
                                     <div className="flex flex-wrap justify-between">
-                                        <div className='flex flex-wrap gap-2'>
+                                        <div className='flex flex-wrap gap-2 mb-2'>
                                             {currentProjects.technologies.map((tech, techIndex) => (
                                                 <span
                                                     key={techIndex}
