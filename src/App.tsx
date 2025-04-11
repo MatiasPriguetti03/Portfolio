@@ -66,7 +66,7 @@ export default function App() {
                 },
                 {
                     selector: '.featured-projects',
-                    styles: { opacity: 1, transform: 'scale(1)' },
+                    styles: { opacity: 1, transform: 'translateY(0)' },
                     options: { delay: 100, duration: 500 },
                 },
                 {
@@ -170,8 +170,8 @@ export default function App() {
                 <meta property="og:image" content="/assets/img/PersonalPhoto.png" />
             </Helmet>
             <main className="flex-grow flex flex-col lg:flex-row">
-                <div className="lg:w-2/6 bg-black/90 p-4 sm:p-8 flex flex-col justify-between overflow-y-auto ">
-                    <div>
+                <div className="lg:w-2/6 bg-black/90 p-4 sm:p-8 flex flex-col justify-between overflow-y-auto">
+                    <div className="w-full">
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 opacity-0 translate-y-10">
                             Hi there, I'm
                             <br />
@@ -208,7 +208,7 @@ export default function App() {
                                 <Mail size={24} />
                             </a>
                         </div>
-                        <p className="text-gray-400 mb-6 opacity-0 translate-y-10 text-md max-w-[500px]">
+                        <p className="text-gray-400 mb-6 opacity-0 translate-y-10 text-md max-w-full">
                             With a <span className='text-yellow-400'>deep interest</span> in software development, I have <span className='text-yellow-400'>experience</span> in creating full-stack web applications and am <span className='text-yellow-400'>constantly</span> seeking opportunities to <span className='text-yellow-400'>grow and enhance</span> my knowledge.
                         </p>
 
@@ -338,16 +338,16 @@ export default function App() {
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-4/6 p-4 sm:p-8 overflow-y-auto">
+                <div className="lg:w-4/6 p-4 sm:p-8 overflow-y-auto featured-projects">
                     <div>
                         <h3 className="text-2xl sm:text-3xl font-bold mb-6">
                             Featured Projects
                         </h3>
-                        <div className="flex flex-row sm:space-y-8 mb-12 featured-projects">
-                            {projects.map((project, index) => (
+                        <div className="flex flex-col sm:flex-row gap-6 mb-12 featured-projects">
+                            {projects.map((project) => (
                                 <div
                                     key={project.title}
-                                    className={`bg-white p-4 !mt-0 sm:p-6 rounded-lg shadow-lg w-full sm:w-1/2 ${index !== 0 ? 'ml-5' : ''}`}
+                                    className="bg-white p-4 sm:p-6 rounded-lg shadow-lg w-full sm:w-1/2"
                                 >
                                     <h4 className=" mb-2">
                                         <span className="group text-2xl sm:text-3xl font-bold  text-black/90">
@@ -376,7 +376,7 @@ export default function App() {
                                             </span>
                                         ))}
                                     </div>
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                                         <a
                                             href={project.repo}
                                             target="_blank"
@@ -454,10 +454,10 @@ export default function App() {
                         </div>
 
                         <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg mb-8 about-me opacity-0 translate-y-10">
-                            <div className="flex flex-col md:flex-row">
-                                <div className="md:w-2/3 pr-0 md:pr-4">
-                                    <h3 className=" mb-4">
-                                        <span className="group text-2xl sm:text-3xl font-bold  text-black/90">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="md:w-2/3">
+                                    <h3 className="mb-4">
+                                        <span className="group text-2xl sm:text-3xl font-bold text-black/90">
                                             <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>.</span>
                                             AboutMe
                                             <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>()</span>
@@ -470,12 +470,14 @@ export default function App() {
                                         I'm a <span className='text-[rgb(246,89,11)]'>quick learner</span> and a team player who enjoys <span className='text-[rgb(246,89,11)]'>collaborating with others</span> to solve problems and create innovative solutions. Likewise, I'm excited about the opportunity to work with a team of talented engineers and contribute to projects that make a <span className='text-[rgb(246,89,11)]'>positive impact on people's lives</span>.
                                     </p>
                                 </div>
-                                <div className="md:w-1/3 mt-4 md:mt-0 justify-items-center place-content-center ">
-                                    <img
-                                        src={personalPhoto}
-                                        alt="Matías Priguetti"
-                                        className="object-bottom relative w-auto  object-contain h-48 sm:h-64 rounded-lg overflow-hidden bg-gradient-to-b from-yellow-400/80 to-[rgb(246,89,11)]/80"
-                                    />
+                                <div className="md:w-1/3 flex justify-center items-center">
+                                    <div className="w-full max-w-[250px]">
+                                        <img
+                                            src={personalPhoto}
+                                            alt="Matías Priguetti"
+                                            className="w-full h-auto object-cover rounded-lg shadow-md overflow-hidden bg-gradient-to-b from-yellow-400/80 to-[rgb(246,89,11)]/80"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -486,17 +488,18 @@ export default function App() {
 
             <footer className="bg-black text-white py-6">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                        <div className="mb-4 md:mb-0">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+                        <div className="mb-4 md:mb-0 text-center md:text-left">
                             <p>
-                                Developed with 🧡 by  <span className='hover:text-yellow-400 transition duration-300 ease-in-out'>Matías Priguetti</span>
+                                Developed with 🧡 by <span className='hover:text-yellow-400 transition duration-300 ease-in-out'>Matías Priguetti</span>
                             </p>
                         </div>
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-6">
                             <a
                                 href="https://github.com/MatiasPriguetti03"
                                 className="hover:text-yellow-400 transition-colors duration-300"
                                 target='_blank'
+                                aria-label="GitHub Profile"
                             >
                                 <Github size={20} />
                             </a>
@@ -504,12 +507,14 @@ export default function App() {
                                 href="https://www.linkedin.com/in/mat%C3%ADas-priguetti-563b76237/"
                                 className="hover:text-yellow-400 transition-colors duration-300"
                                 target='_blank'
+                                aria-label="LinkedIn Profile"
                             >
                                 <Linkedin size={20} />
                             </a>
                             <a
                                 href="mailto:matiaspriguetti03@gmail.com"
                                 className="hover:text-yellow-400 transition-colors duration-300"
+                                aria-label="Email Contact"
                             >
                                 <Mail size={20} />
                             </a>
