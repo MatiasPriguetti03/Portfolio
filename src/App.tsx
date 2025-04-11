@@ -135,10 +135,14 @@ export default function App() {
     const education = [
         {
             title: 'Computer Engineering',
-            institution: 'FING - UdelaR',
-            year: '2021 - Today',
+            institution: 'FING - Universidad de la Republica',
+            year: '2021 - Ongoing',
         },
-
+        {
+            title: 'Jovenes a Programar',
+            institution: 'Ceibal',
+            year: '2025 - Ongoing',
+        },
     ];
     // const certifications = [
     //     {
