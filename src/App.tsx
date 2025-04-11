@@ -5,7 +5,7 @@ import {
     ChevronRight,
     ExternalLink,
     GraduationCap,
-    // Award,
+    // Award
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import volandoUYImage from './assets/img/volandoUY.webp';
@@ -94,8 +94,7 @@ export default function App() {
         {
             title: 'CookieType',
             desc: 'A simple game where you have to type the words that appear on the screen before the time runs out. It has a time selector, language selector, and more.',
-            img: { cookieTypeImage },
-            gif: '#',
+            img: cookieTypeImage ,
             repo: 'https://github.com/MatiasPriguetti03/cookieType',
             liveDemo: 'https://matiaspriguetti03.github.io/cookieType/',
             technologies: [
@@ -105,25 +104,24 @@ export default function App() {
                 'Vite',
             ],
         },
+        { 
+            title: 'VolandoUY',
+            desc: 'Full-stack web app with a variety of features such as user authentication, a booking system, the ability to create and buy packages, check-in, etc.',
+            img: volandoUYImage,
+            repo: 'https://github.com/MatiasPriguetti03/Volando.UY',
+            // liveDemo: '#',
+            technologies: [
+                'HTML',
+                'CSS',
+                'JavaScript',
+                'Bootstrap',
+                'Java',
+                'JSP',
+            ],
+        },
     ];
 
-    const currentProjects =
-    {
-        title: 'VolandoUY',
-        desc: 'Full-stack web with a variety of features such as user authentication, a booking system, the ability to create and buy packages, check-in, etc.',
-        img: { volandoUYImage },
-        gif: '@/img/volandoUY.webp',
-        repo: 'https://github.com/MatiasPriguetti03/Volando.UY',
-        // liveDemo: '#',
-        technologies: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'Bootstrap',
-            'Java',
-            'JSP',
-        ],
-    };
+    // const currentProjects = {}
 
 
     // const workExperience = [
@@ -362,10 +360,9 @@ export default function App() {
                                     <div className="group relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
                                         <a href={project.liveDemo} target='_blank' rel="noopener noreferrer" className='pointer'>
                                             <img
-                                                src={typeof project.img === 'string' ? project.img : project.img.cookieTypeImage}
+                                                src={project.img}
                                                 alt={project.title}
                                                 className="absolute top-0 w-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
-
                                             />
                                         </a>
                                     </div>
@@ -389,14 +386,17 @@ export default function App() {
                                             <Github className="mr-2" />
                                             View Repository
                                         </a>
-                                        <a
-                                            href={project.liveDemo}
-                                            className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
-                                            target="_blank"
-                                        >
-                                            <ExternalLink className="mr-2" />
-                                            Live Demo
-                                        </a>
+                                        {project.liveDemo && (
+                                            <a
+                                                href={project.liveDemo}
+                                                className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <ExternalLink className="mr-2" />
+                                                Live Demo
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -405,7 +405,7 @@ export default function App() {
                         <div>
 
 
-                            <h3 className="text-2xl sm:text-3xl font-bold mb-6">
+                            {/* <h3 className="text-2xl sm:text-3xl font-bold mb-6">
                                 Currently Working On
                             </h3>
                             <div className="flex flex-col max-w-full w-full sm:space-y-8 mb-12">
@@ -450,7 +450,7 @@ export default function App() {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg mb-8 about-me opacity-0 translate-y-10">
