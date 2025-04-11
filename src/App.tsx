@@ -362,13 +362,11 @@ export default function App() {
                                     </h4>
                                     <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
                                     <div className="group relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
-                                        <a href={project.liveDemo} target='_blank' rel="noopener noreferrer" className='pointer'>
                                             <img
                                                 src={project.img}
                                                 alt={project.title}
                                                 className="absolute top-0 w-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
                                             />
-                                        </a>
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {project.technologies.map((tech, techIndex) => (
