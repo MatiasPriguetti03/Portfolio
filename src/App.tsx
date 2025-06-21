@@ -10,7 +10,7 @@ import {
 import { useEffect, useRef } from 'react';
 import BraceBlog from './assets/img/BraceBlog.webp'
 import volandoUYImage from './assets/img/volandoUY.webp';
-import personalPhoto from './assets/img/PersonalPhoto.png';
+import personalPhoto from './assets/img/PersonalPhoto.webp';
 import { Helmet } from 'react-helmet';
 
 export default function App() {
