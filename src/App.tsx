@@ -8,8 +8,8 @@ import {
     // Award
 } from 'lucide-react';
 import { useEffect, useRef } from 'react';
+import BraceBlog from './assets/img/BraceBlog.webp'
 import volandoUYImage from './assets/img/volandoUY.webp';
-import cookieTypeImage from './assets/img/cookietype.webp';
 import personalPhoto from './assets/img/PersonalPhoto.png';
 import { Helmet } from 'react-helmet';
 
@@ -92,21 +92,21 @@ export default function App() {
 
     const projects = [
         {
-            title: 'CookieType',
-            desc: 'A simple game where you have to type the words that appear on the screen before the time runs out. It has a time selector, language selector, and more.',
-            img: cookieTypeImage ,
-            repo: 'https://github.com/MatiasPriguetti03/cookieType',
-            liveDemo: 'https://matiaspriguetti03.github.io/cookieType/',
+            title: 'BraceBlog',
+            desc: 'Full-stack project featuring user authentication (JWT), post management with a rich text editor, cloud image uploads (Cloudinary), and a RESTful API built with Node.js and Express.',
+            img: BraceBlog,
+            repo: 'https://github.com/MatiasPriguetti03/BraceBlog',
+            liveDemo: 'https://brace-blog-frontend-git-master-matiaspriguetti03s-projects.vercel.app/',
             technologies: [
-                'HTML',
-                'CSS',
-                'JavaScript',
-                'Vite',
+                'React.js',
+                'Node.js',
+                'Express',
+                'MongoDB',
             ],
         },
         { 
             title: 'VolandoUY',
-            desc: 'Full-stack web app with a variety of features such as user authentication, a booking system, the ability to create and buy packages, check-in, etc.',
+            desc: "Full-stack web app with a variety of features such as user authentication, a booking system, do check-in, the ability to create and buy packages, creating flights and flight's routes, etc.",
             img: volandoUYImage,
             repo: 'https://github.com/MatiasPriguetti03/Volando.UY',
             // liveDemo: '#',
@@ -158,6 +158,17 @@ export default function App() {
             repo: 'https://github.com/MatiasPriguetti03/Mercado-Finger',
             technologies: ['C++', 'Makefile', 'Valgrind'],
         },
+        {
+            title: 'CookieType',
+            desc: 'A simple game where you have to type the words that appear on the screen before the time runs out. It has a time selector, language selector, and more.',
+            repo: 'https://github.com/MatiasPriguetti03/cookieType',
+            technologies: [
+                'HTML',
+                'CSS',
+                'JavaScript',
+                'Vite',
+            ],
+        },
     ];
 
 
@@ -167,7 +178,7 @@ export default function App() {
             className="flex flex-col min-h-screen bg-gradient-to-br from-yellow-400/90 to-orange-500/90 opacity-0"
         >
             <Helmet>
-                <title>Matías Priguetti - Computer Engineer Student</title>
+                <title>Matías Priguetti - FullStack Developer</title>
                 <meta name="description" content="Portfolio de Matías Priguetti, estudiante de Ingeniería en Computación" />
                 <meta name="keywords" content="desarrollo web, full stack, ingeniería" />
                 <meta property="og:title" content="Matías Priguetti - Portfolio" />
@@ -185,7 +196,7 @@ export default function App() {
                             </span>
                         </h1>
                         <h2 className="text-lg sm:text-xl lg:text-2xl text-white mb-4 opacity-0 translate-y-10">
-                            Computer Engineer Student
+                            FullStack Developer
                         </h2>
                         <div className="flex space-x-4 mb-6 social-links opacity-0 translate-y-10">
                             <a
@@ -360,12 +371,11 @@ export default function App() {
                                             <span className='text-[rgb(246,89,11)] group-hover:text-yellow-400 transition duration-300 ease-in-out'>()</span>
                                         </span>
                                     </h4>
-                                    <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>
-                                    <div className="group relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
+                                    <p className="text-gray-600 mb-4 text-pretty text">{project.desc}</p>                                    <div className="group relative h-48 sm:h-64 mb-4 overflow-hidden rounded-lg">
                                             <img
                                                 src={project.img}
                                                 alt={project.title}
-                                                className="absolute top-0 w-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                                                className="absolute top-[-20px] w-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
                                             />
                                     </div>
                                     <div className="flex flex-wrap gap-2 mb-4">
